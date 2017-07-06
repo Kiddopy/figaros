@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <link href="estilo.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    <div id = "menus">
+       <a href=''>Inicio</a>
+        <a href=''>Servicos</a>
+        <a href=''>Contato</a>    
+    </div>
+
+    <div id = "separa">
+    </div>
+    
+    <div id = "jumbo">
+
+    </div>
+    
+    <div id = "separa">
+    </div>
+
+<center>
+
+    <div id  = "itens">
+
+    
+    <br>
+    <br>
+
+      <h1>Sobre nós</h1>
+      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras condimentum velit ac leo interdum, blandit scelerisque justo gravida. Cras blandit mattis mauris ac maximus. Etiam nulla tellus, pretium quis mi vel, vulputate mollis lacus. Suspendisse pellentesque tellus nec ligula porttitor maximus. In cursus ut dolor ac varius.</h2>
+
+         
+         <div class="slideshow-container">
+ 
+             <div class="mySlides fade">
+                <img src="http://www.ocarafashion.com/wp-content/uploads/2016/01/Imagem-destacada-Blog5-1200x800_c.jpg" style="width:50%" height=50%>
+             </div>
+
+             <div class="mySlides fade">
+                <img src="http://www.barbafeita.com.br/wp-content/uploads/2015/11/cabelo-masculino-hidratar.jpg?x62087" style="width:50%" height=50%>
+             </div>
+
+             <div class="mySlides fade">
+                <img src="http://modajovemmasculina.com/wp-content/uploads/2015/01/moda-bigode-02.jpg" style="width:50%" height=50%>
+             </div>
+
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+    </div>
+
+    <script>
+       var slideIndex = 1;
+       showSlides(slideIndex);
+
+       function plusSlides(n) {
+          showSlides(slideIndex += n);
+       }
+
+       function currentSlide(n) {
+          showSlides(slideIndex = n);
+       }
+
+       function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+                }
+  
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+                }
+  
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+        }
+
+     </script>
+   
+   
+   </center>
+    
+  </body>
+  
+  
+  <footer>
+  </footer>  
+</html>
